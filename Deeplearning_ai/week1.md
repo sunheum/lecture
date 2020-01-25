@@ -1,5 +1,5 @@
 ## What is a Neural Network?
-![집값에 따른 가격 예측](https://user-images.githubusercontent.com/39797969/73122304-9f7c0100-3fc6-11ea-9acf-ce1cd21620db.PNG)  
+![집값에 따른 가격 예측](./img/week1_01.PNG)  
 x값(집의 크기)를 input으로 넣으면 y값(가격)이 output으로 나오는 형태  
 활성화함수로 ReLU(Rectified Linear Unit)을 많이 사용한다.
 ![집값을 결정하는 요소 계산 예시](https://user-images.githubusercontent.com/39797969/73122299-8f642180-3fc6-11ea-8f3f-37be257f877e.PNG)  
