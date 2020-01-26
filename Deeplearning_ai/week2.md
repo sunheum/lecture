@@ -16,7 +16,7 @@
 - parameter인 w와 b는 나누어 표현하는 것이 좋다. 오른쪽의 표현방법은 w와 b를 한 개의 벡터로 나타낸 것이며 사용하지 않는다.
 ## Cost Function
 ![Cost Function](./img/week2_04.PNG)  
-- Loss function을 정의할 때, `\\(frac { 1 }{ 2 } { (\hat { y } -y) }^{ 2 }\\)` 으로 한다면 경사하강법 실행 시 local minimun에 빠지기 쉽다.
-- 따라서 Loss function은 `\\(L (\hat { y } ,y)\quad =\quad -(y\log { \hat { y }  } +(1-y)\log { (1-\hat { y } )) }\\) ` 으로 정의한다.
+- Loss function을 정의할 때, `$$ frac { 1 }{ 2 } { (\hat { y } -y) }^{ 2 } $$` 으로 한다면 경사하강법 실행 시 local minimun에 빠지기 쉽다.
+- 따라서 Loss function은 `$$ \L (\hat { y } ,y)\quad =\quad -(y\log { \hat { y }  } +(1-y)\log { (1-\hat { y } )) } $$` 으로 정의한다.
 - 손실함수를 작게 만드는 것이 목표이므로, y=1인 경우 y hat값은 커져야 하고 y=0인 경우 y hat값은 작아져야 한다.
 - Cost function은 각 학습 데이터의 Loss function을 더한 값이며 `J(w,b)` 로 나타낸다.
