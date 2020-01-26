@@ -17,6 +17,12 @@
 ## Cost Function
 ![Cost Function](./img/week2_04.PNG)  
 - Loss function을 정의할 때, `1/2(y^ - y)^2` 으로 한다면 경사하강법 실행 시 local minimun에 빠지기 쉽다.
-- 따라서 Loss function은 `![수식2](https://user-images.githubusercontent.com/39797969/73132555-0c8fa500-4060-11ea-94e1-4abb0b7e5d52.png)`으로 정의한다.
+- 따라서 Loss function은 `-(ylogy^ + (1-y)log(1-y^))`으로 정의한다.
 - 손실함수를 작게 만드는 것이 목표이므로, y=1인 경우 y hat값은 커져야 하고 y=0인 경우 y hat값은 작아져야 한다.
 - Cost function은 각 학습 데이터의 Loss function을 더한 값이며 `J(w,b)` 로 나타낸다.
+## Gradient Descent
+![Gradient Descent_1](./img/week2_05.PNG)  
+- `J(w,b)`를 최소화시키는 `w,b`값을 찾는것을 목표로 경사하강법을 사용한다.
+![Gradient Descent_2](./img/week2_06.PNG)  
+- w를 `기울기*learning rate` 만큼 뺀 값으로 업데이트하여 local minimun 값을 찾는 방법이다.
+- 위의 예시는 w만의 함수일 경우이고, 아래 수식은 b값을 추가적으로 고려한 것이다.
