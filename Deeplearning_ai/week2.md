@@ -26,3 +26,13 @@
 ![Gradient Descent_2](./img/week2_06.PNG)  
 - w를 `기울기*learning rate` 만큼 뺀 값으로 업데이트하여 local minimun 값을 찾는 방법이다.
 - 위의 예시는 w만의 함수일 경우이고, 아래 수식은 b값을 추가적으로 고려한 것이다.
+## Logistic Regression에 적용_1개의 example
+![Gradient Descent_3](./img/week2_07.PNG)  
+- `x1,w1,x2,w2,b` 값으로 손실함수를 계산하는 과정이다. 초기값을 통해 `L(a,y)`값을 구한 뒤 `dw1,dw2,db` 값을 구해 `w1,w2,b` 값을 업데이트 한다.
+- 여기서 사용한 `da, dz, dw1`은 파이썬 코드에서 변수명으로 사용될 Notation이다.
+## Logistic Regression에 적용_m개의 example
+![Gradient Descent_3](./img/week2_08.PNG)  
+- `J,dw1,dw2,db`의 초기값을 0으로 둔다.
+- `z,a,J,dz,dw1,dw2,db`값을 계산한다. 여기서 `J,dw1,dw2,db`는 누적으로 더해지는 값이다.
+- 누적으로 더한 값들을 m으로 나눈 후 오른쪽 식을 통해 `w1,w2,b`를 업데이트 한다.
+- wn까지 있다고 가정한다면 for문이 2번 필요하게 된다. 이는 대용량의 데이터 처리에 부적합하여 `Vectorization` 과정이 필요하다.
