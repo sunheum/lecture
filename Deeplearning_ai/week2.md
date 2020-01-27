@@ -36,3 +36,10 @@
 - `z,a,J,dz,dw1,dw2,db`값을 계산한다. 여기서 `J,dw1,dw2,db`는 누적으로 더해지는 값이다.
 - 누적으로 더한 값들을 m으로 나눈 후 오른쪽 식을 통해 `w1,w2,b`를 업데이트 한다.
 - wn까지 있다고 가정한다면 for문이 2번 필요하게 된다. 이는 대용량의 데이터 처리에 부적합하여 `Vectorization` 과정이 필요하다.
+## Vectorization
+- 빠른 결과확인을 위해 vectorization을 통해 for문을 제거한다.
+- `Z = np.dot(w,x) + b` , `A = sigmoid(Z)`와 같이 Z와 A리스트로 1~m까지의 for문을 줄일 수 있다.
+- `dw = np.zeros((nx,1)), dw += x[i]dz[i]`로 dw부분의 for문을 줄일 수 있다.
+- 아래 예시는 Vectorization을 적용했을 때와 아닐때의 계산속도 차이를 보여준다. 500배 정도의 차이가 난다.
+![vectorization](./img/week2_09.PNG)  
+
